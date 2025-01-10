@@ -1,8 +1,12 @@
 # breakfastofchampions
 Jessica you better finish this and make it beautiful
 
+## TO DO
+- Put in a nav bar
+- Decide site layout
+- Hunt bootstrap and try to figure out a freaking theme
 
-## Here is a change I am testing out
+## Ideas for writing
 - I would like to think up what I will be putting here
 - I want to write a blog about maybe MJ Lenderman and why I am so interested in the Asheville music scene, also Karly Hartzman...she's awesome > they broke up > dating your coworker > being a musician
 - I would love to talk about North Carolina and why I love it here
