@@ -1,0 +1,5 @@
+Okay so this is how i'll keep my blog posts because Kris did it this way and I think it's useful maybe?
+
+So here is blog 1: 
+
+Well I want to start this with the obligatory welcome to this blog and i've never done this before. But also there's this additional layer to my blog which is that I carved out this corner of the internet with my own two bare hands and the computer science degree that was given to me by God. So not only am I baring my soul to the internet through a keyboard, I have also encased it in a precious capsule that I spent days gluing tiny sequins and shells and rhinestones onto. This is my passion project I think, and it is a website which is cool and not at all what I thought I would be doing. Anyways I don't really have a plan for this other than to put up my stuff and then maybe figure out how to make it look even cooler or let people comment on things. I'm frankly still toying with the idea of making this and sending it to 0 people, it really doesn't have to be a performance. But on the complete other hand I really do love performance.
