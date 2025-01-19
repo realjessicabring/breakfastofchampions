@@ -127,3 +127,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TEMPLATE_DIRS = (
     "breakfastofchampions/templates",
 )
+STATICFILES_DIRS = (
+    "breakfastofchampions/static",
+)

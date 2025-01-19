@@ -1,31 +1,19 @@
 <!-- home.html -->
+{% load static %}
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Breakfast of Champions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playwrite+DE+Grund+Guides&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="../static/styles.css" rel="stylesheet">
   </head>
-  <style>
-    .pinyon-script-regular {
-    font-family: "Pinyon Script", serif;
-    font-weight: 400;
-    font-style: normal;
-    color:plum;
-    } 
-    .playwrite-de-grund-guides-regular {
-    font-family: "Playwrite DE Grund Guides", serif;
-    font-weight: 400;
-    font-style: normal;
-    color:palevioletred;
-    }
-  </style>
+
   <body>
     <div class="container-fluid">
       <h1 class="pinyon-script-regular display-1 text-center">Breakfast of Champions</h1>
@@ -46,6 +34,15 @@
     </ul>
     <div class="container-fluid">
         <!-- This is where I will display the blogs but i'm not sure what the best way to list them is -->
+       {% for row in blogs_array %}
+        <div class="row">
+            {% for blog in row %}
+            <div class="column">
+               <a href=""><img src= {{blog.img_link}} style="width:100%"></a> 
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
