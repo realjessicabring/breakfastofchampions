@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 from breakfastofchampions import views
 
@@ -24,6 +27,11 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('blog', views.blog, name='blog'),
     path(
-        "markdown-content/", views.markdown_content_view, name="markdown-content"
+        "blog/<slug:slug>/",
+        views.markdown_content_view,
+        name="markdown-content",    
     ),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

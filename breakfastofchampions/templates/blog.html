@@ -1,6 +1,7 @@
 <!-- home.html -->
 {% load static %}
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playwrite+DE+Grund+Guides&display=swap" rel="stylesheet">
-    <link href="../static/styles.css" rel="stylesheet">
+    <link href="../static/styles.css?{% now "U" %}" rel="stylesheet">
   </head>
 
   <body>
@@ -20,7 +21,7 @@
     </div>
     <ul class="nav justify-content-center playwrite-de-grund-guides-regular">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">home</a>
+        <a class="nav-link active" aria-current="page" href="/">home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/blog">blog</a>
@@ -32,17 +33,30 @@
         <a class="nav-link" href="#">about</a>
       </li>
     </ul>
-    <div class="container-fluid">
         <!-- This is where I will display the blogs but i'm not sure what the best way to list them is -->
-       {% for row in blogs_array %}
         <div class="row">
-            {% for blog in row %}
-            <div class="column">
-               <a href=""><img src= {{blog.img_link}} style="width:100%"></a> 
+          <div class="leftcolumn">
+
+        {% for blog in markdown_content%}
+          <div class="card">
+            <div class="container">
+            <div class="blog-left">
+              <a href="blog/{{blog.slug}}"><img src="../../..{{blog.image.url}}" class="blog-img" style="height: 30%;"></a> 
             </div>
-            {% endfor %}
-        </div>
+            <div class="blog-right">            
+            <h1 class="tinos-regular"><a href="blog/{{blog.slug}}">{{blog.title}}</a></h1>
+            <h4 class="source-serif-4-font" style="  color:gray;font-size: 12pt;">I wrote this on {{blog.timestamp|date:"F j, Y" }}</h4>
+            <p class="source-serif-4-font" style="font-size:16pt;">{{blog.intro}}</p>
+            </div>
+          </div>
+          </div>
         {% endfor %}
+        </div>
+        <div class="rightcolumn">
+          <h3>Follow Me</h3>
+      <p>Some text..</p>
+        </div>
+
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
