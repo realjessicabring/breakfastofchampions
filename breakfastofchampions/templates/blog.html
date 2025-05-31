@@ -34,29 +34,41 @@
       </li>
     </ul>
         <!-- This is where I will display the blogs but i'm not sure what the best way to list them is -->
+        <div class="container" style="width: 75%; justify-content:center;">
         <div class="row">
-          <div class="leftcolumn">
 
         {% for blog in markdown_content%}
-          <div class="card">
-            <div class="container">
-            <div class="blog-left">
-              <a href="blog/{{blog.slug}}"><img src="../../..{{blog.image.url}}" class="blog-img" style="height: 30%;"></a> 
+          {% if forloop.first %}
+            <div class="first-card">
+                <div class="blog-left">
+                  <a href="blog/{{blog.slug}}"><img src="../../..{{blog.image.url}}" class="card-img-top" style="height: 30%;"></a> 
+                </div>
+                  <div class="blog-right">            
+                    <h1 class="tinos-regular"><a href="blog/{{blog.slug}}">{{blog.title}}</a></h1>
+                    <h4 class="source-serif-4-font" style="  color:gray;font-size: 12pt;">I wrote this on {{blog.timestamp|date:"F j, Y" }}</h4>
+                    <p class="source-serif-4-font" style="font-size:16pt;">{{blog.intro}}</p>
+                  </div>
             </div>
-            <div class="blog-right">            
-            <h1 class="tinos-regular"><a href="blog/{{blog.slug}}">{{blog.title}}</a></h1>
-            <h4 class="source-serif-4-font" style="  color:gray;font-size: 12pt;">I wrote this on {{blog.timestamp|date:"F j, Y" }}</h4>
-            <p class="source-serif-4-font" style="font-size:16pt;">{{blog.intro}}</p>
+            </div>
+            <div class ="row mt-3">
+          {% else %}
+          <div class="col-sm">
+            <div class="card" style="width: 100%;">
+              <div class="card-img-top" style="border-radius: 50% !important;">
+                <a href="blog/{{blog.slug}}"><img src="../../..{{blog.image.url}}" class="blog-img" style="height: 30%;"></a> 
+              </div>
+                <div class="card-body">            
+                  <h1 class="tinos-regular card-title"><a href="blog/{{blog.slug}}">{{blog.title}}</a></h1>
+                  <h4 class="source-serif-4-font" style="  color:gray;font-size: 12pt;">I wrote this on {{blog.timestamp|date:"F j, Y" }}</h4>
+                  <p class="source-serif-4-font card-text" style="font-size:16pt;">{{blog.intro}}</p>
+                </div>
             </div>
           </div>
-          </div>
-        {% endfor %}
-        </div>
-        <div class="rightcolumn">
-          <h3>Follow Me</h3>
-      <p>Some text..</p>
-        </div>
+            {% endif %}
 
+            {% endfor %}
+        
+        </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

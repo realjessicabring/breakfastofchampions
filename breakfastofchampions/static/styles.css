@@ -23,29 +23,32 @@
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
-  float: left;
+  align-self: center;
   width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%
 }
 
 /* Add a card effect for articles */
-.card {
+.first-card {
   background-color: white;
-  padding: 20px;
   margin-top: 20px;
+  align-self: center;
+  border-color: coral;
+  background-color: bisque;
+  border-radius: 9px;
+  height: 350px;
+  margin-left: 1%;
+  margin-right: 2%
 }
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 /* Footer */
 .footer {
@@ -58,14 +61,15 @@
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {
-    width: 30%;
+    width: 80%;
     padding: 0;
+    align-self: center;
   }
 }
 
 .blog-img{
   width: 100%;
-  padding: 20px;
+  height: 100%;
 }
 
 .blog-left{
@@ -108,4 +112,9 @@
   font-weight: 100;
   font-style: normal;
 
+}
+
+.blog-holder{
+  margin-top: 5%;
+  padding: 2% 2% 2% 2%;
 }

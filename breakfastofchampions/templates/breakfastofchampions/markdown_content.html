@@ -19,7 +19,7 @@
     </div>
     <ul class="nav justify-content-center playwrite-de-grund-guides-regular">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">home</a>
+        <a class="nav-link active" aria-current="page" href="/">home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/blog">blog</a>
@@ -31,7 +31,9 @@
         <a class="nav-link" href="#">about</a>
       </li>
     </ul>
+    <div class="blog-holder">
     <h1>{{ markdown_content.title }}</h1>
     <p>{{ markdown_content.content|render_markdown}}</p>
+    </div>
   </body>
 </html>
