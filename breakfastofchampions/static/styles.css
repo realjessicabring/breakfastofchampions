@@ -32,15 +32,56 @@
 
 /* Add a card effect for articles */
 .first-card {
-  background-color: white;
+  grid-area: 1 / 1 / span 1 / span 3;
   margin-top: 20px;
+  background-color: white;
   align-self: center;
   border-color: coral;
   background-color: bisque;
   border-radius: 9px;
   height: 350px;
-  margin-left: 1%;
-  margin-right: 2%
+}
+
+.first-card-text {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 400px 500px;
+  height: 350px;
+
+}
+
+.card-img-left {
+  max-height: 350px !important;
+  max-width: 400px;
+
+}
+
+.card-img-left img {
+  border-radius: 10px 0px 0px 10px;
+
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.card-title a {
+  color: black;
+  text-decoration: double;
+}
+
+.card-subtitle {
+  font-size: 14px;
+}
+
+.card-description {
+  margin-top: 10px;
+  overflow: scroll;
+  font-size: 12px;
 }
 
 /* Clear floats after the columns */
@@ -60,10 +101,12 @@
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 80%;
-    padding: 0;
-    align-self: center;
+  .grid-blog {
+    grid-template-columns: 300px;
+  }
+
+  .first-column {
+    grid-area: 1 / 1 / span 1 / span 1;
   }
 }
 
@@ -72,9 +115,15 @@
   height: 100%;
 }
 
-.blog-left{
-  float: left;
-  width: 20%;
+/* .blog-left{
+} */
+
+.blog-right-text {
+  margin-left: 15px;
+}
+
+.blog-right-text a {
+  color: black;
 }
 
 .blog-right{
@@ -117,4 +166,33 @@
 .blog-holder{
   margin-top: 5%;
   padding: 2% 2% 2% 2%;
+}
+
+.nav-link {
+  color: black;
+}
+
+.card-img-top img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 9px 9px 0px 0px;
+}
+.card-img-top {
+  max-height: 200px;
+
+}
+
+.card {
+  border-radius: 10px;
+  width: 100%;
+  max-height: 400px;
+}
+
+.grid-blog {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 300px 300px 300px;
 }
