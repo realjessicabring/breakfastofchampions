@@ -131,7 +131,13 @@
   width: 80%;
 }
 
-.tinos-regular {
+.tinos-regular p {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tinos-regular li {
   font-family: "Tinos", serif;
   font-weight: 400;
   font-style: normal;
@@ -165,7 +171,7 @@
 
 .blog-holder{
   margin-top: 5%;
-  padding: 2% 2% 2% 2%;
+  padding: 2% 20% 2% 20%;
 }
 
 .nav-link {
@@ -180,19 +186,29 @@
   border-radius: 9px 9px 0px 0px;
 }
 .card-img-top {
-  max-height: 200px;
+  max-height: 300px;
 
 }
 
 .card {
   border-radius: 10px;
   width: 100%;
-  max-height: 400px;
+  max-height: 500px;
 }
 
 .grid-blog {
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+.blog-body {
+  font-size: 20px;
 }
