@@ -33,7 +33,15 @@
     </ul>
     <div class="blog-holder">
     <h1 class="blog-header playwrite-de-grund-guides-regular">{{ markdown_content.title }}</h1>
-    <h4 class="source-serif-4-font card-subtitle">I wrote this on {{markdown_content.timestamp|date:"F j, Y" }}</h4>
+    <h4 class="source-serif-4-font author">Jessica Bring</h4>
+    <h4 class="source-serif-4-font blog-date">I wrote this on {{markdown_content.timestamp|date:"F j, Y" }}</h4>
+    <hr class="solid">
+
+    <div class="blog-image-container">
+      <img  class="blog-image" src="../../..{{markdown_content.blog_header_image.url}}">
+    </div>
+    <hr class="solid">
+
     <div class="tinos-regular blog-body">{{ markdown_content.content|render_markdown}}</div>
     </div>
   </body>
