@@ -1,4 +1,5 @@
 <!-- home.html -->
+{% load static %}
 
 <!doctype html>
 <html lang="en">
@@ -9,31 +10,54 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playwrite+DE+Grund+Guides&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playwrite+DE+Grund+Guides&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <link href="../static/styles.css?{% now "U" %}" rel="stylesheet">
     <link href="../static/styles.css" rel="stylesheet">
 
   </head>
   <body>
-    <div class="container-fluid">
-      <h1 class="pinyon-script-regular display-1 text-center">Breakfast of Champions</h1>
-    </div>
-    <ul class="nav justify-content-center playwrite-de-grund-guides-regular">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/blog">blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">music</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">about</a>
-      </li>
-    </ul>
-    <div class="container-fluid">
-      <!-- My most recent blog, should be stored in a db of some sort or a dictionary of text and cover pictures and other assets -->
+    <div class="home-page">
+      <div class="container-fluid">
+        <h1 class="pinyon-script-regular display-1 text-center" style="padding-top: 10px;">Breakfast of Champions</h1>
+      </div>
 
+      <div class="blog-home-holder">
+        <div class="home-grid">
+          <div class="image-container">
+            <a class="handwritten" href="/blog">
+              <img src="../static/blog.png">
+            </a>
+          </div>
+          <div class="image-container">
+            <a class="handwritten" href="/blog">
+              <img src="../static/music.png">
+            </a>
+          </div>
+          <div class="image-container">
+            <a class="handwritten" href="/blog">
+              <img src="../static/misc.png">
+            </a>
+          </div>
+          <div class="image-container">
+            <a class="handwritten" href="/blog">
+              <img src="../static/about.png">
+            </a>
+          </div>
+        </div>
+        <!-- My most recent blog, should be stored in a db of some sort or a dictionary of text and cover pictures and other assets -->
+
+      </div>
+      <div class="blog-home-footer">
+        <div>
+          <p class="playwrite-de-grund-guides-regular footer-text">
+            Made in North Carolina by Jessica Bring
+          </p>
+          <p class="playwrite-de-grund-guides-regular footer-text" style="font-size: 10px; color: palevioletred;">
+
+            This website was designed and built by me in 2025
+
+          </p>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
